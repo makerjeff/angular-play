@@ -56,7 +56,7 @@ init();
  *
  */
 function init() {
-    console.log(colors.green(' Starting EXPRESS server on ' + port + ' on a ' + process.arch + ' machine.'));
+    console.log(colors.rainbow(' Starting EXPRESS server on ' + port + ' on a ' + process.arch + ' machine.'));
 
     //open port on defined port, if nothing is available, default to 8000.
     app.listen(port || 8000);
