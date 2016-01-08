@@ -8,10 +8,14 @@
     <tr>
         <th>Name</th>
         <th>Cost</th>
+        <th>HP</th>
+        <th>TQ</th>
     </tr>
 
-    <tr ng-repeat="scotch in scotches">
-        <td> {{scotch.name}}</td>
-        <td> {{scotch.price}}</td>
+    <tr ng-repeat="car in cars">
+        <td> {{car.model}}</td>
+        <td> {{car.price}}</td>
+        <td>{{car.hp}}</td>
+        <td>{{car.tq}}</td>
     </tr>
 </table>

@@ -90,26 +90,36 @@ app.controller('mainController', function($scope, $timeout){
 // == Car Specific Controller ==
 app.controller('carController', ['$scope','$timeout', function($scope, $timeout){
     //data for dummy scope
-    $scope.car = [
+    $scope.cars = [
         {
             model:'Toyota Corolla',
-            price: 12000
+            price: 12000,
+            hp: 102,
+            tq: 101
         },
         {
             model:'Nissan 240SX',
-            price: 2900
+            price: 2900,
+            hp: 140,
+            tq: 152
         },
         {
             model:'Toyota Matrix',
-            price: 15800
+            price: 15800,
+            hp: 130,
+            tq: 125
         },
         {
             model: 'Toyota Corolla',
-            price: 16000
+            price: 16000,
+            hp: 126,
+            tq: 122
         },
         {
             model: 'Toyota Pickup',
-            price: 12000
+            price: 12000,
+            hp: 116,
+            tq: 140
         }
     ];
 }]);
