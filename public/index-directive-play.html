@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Directive Play</title>
+
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+    <script src="js/core-directive-play.js"></script>
+</head>
+<body ng-app="directivePlayApp">
+
+    <input type="text" ng-model="name" placeholder="name">
+    <h1>{{name}}</h1>
+
+    <span ng-sparkline> (this gets replaced) </span>
+    <ng-sparkline> (this gets replaced) </ng-sparkline>
+    <span class="ng-sparkline"> (this gets replaced) </span>
+    <!-- directive: ng-sparkline -->
+
+
+</body>
+</html>
