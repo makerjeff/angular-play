@@ -58,6 +58,26 @@ app.directive('ngSparkline', function() {
     return {
         restrict: 'AECM',
         require: '^ngModel',
-        templateUrl: 'templates/ng-sparkline-template.html'
+        scope: {},              //isolated scope so each directive operates independently
+        templateUrl: 'templates/ng-sparkline-template.html',
+        controller: ['$scope', '$http', function($scope, $http){
+            $scope.getTemp = function(city){
+                $http({
+                    method:'JSONP',
+                    url: url + city,
+                }).success(function(data){
+                    var weather =[];
+                    angular.forEach(data.list, function(value){
+                        weather.push(value);
+                    });
+                });
+
+                $scope.weather = weather;
+            };
+        }],
+        //link: function(scope iElement, iAttrs, ctrl) {
+        //    scope.getTemp(iAttrs.ngCity);
+        //}
+
     }
 });
